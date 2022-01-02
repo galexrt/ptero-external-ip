@@ -1,4 +1,4 @@
-# callowaysutton/external-ip
+# callowaysutton/ptero-external-ip
 # For Pterodactyl
 
 **DEPRECATED: Use `com.docker.network.host_ipv4` bridge option since Docker v25. See
