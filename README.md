@@ -1,4 +1,4 @@
-# callowaysutton/external-ip
+# callowaysutton/ptero-external-ip
 # For Pterodactyl
 
 <https://gitlab.com/tozd/docker/external-ip>
