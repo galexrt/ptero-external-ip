@@ -1,4 +1,6 @@
 # callowaysutton/ptero-external-ip
+<img src="https://img.shields.io/docker/pulls/callowaysutton/ptero-external-ip?style=flat-square"> 
+
 # For Pterodactyl
 
 **DEPRECATED: Use `com.docker.network.host_ipv4` bridge option since Docker v25. See
