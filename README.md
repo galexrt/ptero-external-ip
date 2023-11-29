@@ -1,4 +1,5 @@
-# tozd/external-ip
+# callowaysutton/external-ip
+# For Pterodactyl
 
 <https://gitlab.com/tozd/docker/external-ip>
 
@@ -43,13 +44,11 @@ $ docker run --detach \
  tozd/external-ip:ubuntu-bionic
 ```
 
-After that, if any other Docker container has an environment variable `EXTERNAL_IP` set, with an IP address to use for
+After that, if any other Docker container has an environment variable `SERVER_IP` set, with an IP address to use for
 containers external IP, iptables will be configured to route container's traffic from that external IP.
 The external IP must be assigned on the host.
 
-A chain named `EXTERNAL_IP` is created in the `nat` table into which all the rules are added.
-And one more empty chain is created after this one for any additional custom rules you might want
-to add, named `AFTER_EXTERNAL_IP`.
+A chain named `SERVER_IP` is created in the `nat` table into which all the rules are added.
 
 Please make sure `/run/xtables.lock` exists on the host before starting the container.
 This file ensures iptables locking is consistent between the host and the container,
@@ -78,13 +77,13 @@ services:
     image: byrnedo/alpine-curl
     command: "-s http://ifconfig.me"
     environment:
-      EXTERNAL_IP: XX.XX.XX.XX
+      SERVER_IP: XX.XX.XX.XX
 
   b:
     image: byrnedo/alpine-curl
     command: "-s http://ifconfig.me"
     environment:
-      EXTERNAL_IP: YY.YY.YY.YY
+      SERVER_IP: YY.YY.YY.YY
 ```
 
 Set XX.XX.XX.XX and YY.YY.YY.YY to your external IP address.
